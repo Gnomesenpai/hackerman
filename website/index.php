@@ -9,7 +9,6 @@ echo $var ?>
 body {
   background-image: url('./img/hackerman.jpg');
   background-repeat: repeat;
-  background-attachment: fixed;
   background-position: center;
   background-size:contain;
 
