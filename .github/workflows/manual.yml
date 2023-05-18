@@ -9,18 +9,9 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
-      - name: Get Package IDs
-        id: packages
-        run: |
-          TOKEN=$GITHUB_TOKEN
-          OWNER=$GITHUB_REPOSITORY_OWNER
-          REPO=$GITHUB_REPOSITORY
-          curl -s -X GET -H "Authorization: token $TOKEN" "https://api.github.com/repos/$OWNER/$REPO/packages" | jq -r ".[] | select(.name | startswith(\"sha\")) | .id" > packages.txt
-      - name: Delete Packages
-        run: |
-          TOKEN=$GITHUB_TOKEN
-          OWNER=$GITHUB_REPOSITORY_OWNER
-          REPO=$GITHUB_REPOSITORY
-          while read id; do
-            curl -s -X DELETE -H "Authorization: token $TOKEN" "https://api.github.com/repos/$OWNER/$REPO/packages/$id"
-          done < packages.txt
+      - uses: actions/delete-package-versions@v4
+        with: 
+          package-name: 'package'
+          package-type: 'container'
+          min-versions-to-keep: 1
+          delete-only-untagged-versions: 'true'
