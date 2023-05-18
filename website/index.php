@@ -10,8 +10,8 @@ body {
   background-image: url('./img/hackerman.jpg');
   background-repeat: repeat;
   background-attachment: fixed;
-  background-size: cover;
   background-position: center;
+  background-size:contain;
 
 }
 </style>
