@@ -11,7 +11,8 @@ body {
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: cover;
-  max-width: 100%;
+  background-position: center;
+
 }
 </style>
 
