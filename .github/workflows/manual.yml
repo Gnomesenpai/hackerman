@@ -8,7 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
       - uses: actions/delete-package-versions@v4
         with: 
           package-name: 'hackerman'
