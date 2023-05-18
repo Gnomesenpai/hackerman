@@ -1,16 +1,11 @@
-name: Delete Packages Starting with sha
-
-on:
-  workflow_dispatch:
-
+name: Remove package versions
+on: push
 jobs:
-  delete_packages:
+  remove-package-versions:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-      - uses: actions/delete-package-versions@v4
-        with: 
-          package-name: 'hackerman'
-          package-type: 'container'
-          min-versions-to-keep: 1
-          delete-only-untagged-versions: 'true'
+    - name: Remove package versions
+      id: remove-package-versions
+      uses: epitomeglobal/remove-package-versions@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
