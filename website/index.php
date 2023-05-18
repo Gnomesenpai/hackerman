@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 </html>
-<?php phpinfo() ?>
+<?php 
+$var= "testing"; 
+
+echo $var
+?>
 </html>
 
 
