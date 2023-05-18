@@ -10,7 +10,7 @@ jobs:
       - name: Checkout Code
       - uses: actions/delete-package-versions@v4
         with: 
-          package-name: 'hackerman'
+          package-name: 'hackerman:master'
           package-type: 'container'
           min-versions-to-keep: 1
           delete-only-untagged-versions: 'true'
