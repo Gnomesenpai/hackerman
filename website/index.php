@@ -4,7 +4,16 @@
 $var= "testing"; 
 echo $var ?>
 <br>
-<img src="./img/hackerman.jpg" style="max-width: 100%;" />
+<!--<img src="./img/hackerman.jpg" style="max-width: 100%;" />-->
+<style>
+body {
+  background-image: url('./img/hackerman.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  max-width: 100%;
+}
+</style>
 
 </html>
 
