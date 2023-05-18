@@ -3,9 +3,9 @@
 <?php 
 $var= "testing"; 
 ?>
-<img src="./img/hackerman.jpg" style="max-width: 100%; " />
+<center><img src="./img/hackerman.jpg" style="max-width: 100%; " /></center>
 <br>
-<a href="https://github.com/Gnomesenpai/hackerman">Github repo</a>
+<center><a href="https://github.com/Gnomesenpai/hackerman">Github repo</a></center>
 
 </html>
 
