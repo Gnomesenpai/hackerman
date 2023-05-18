@@ -4,7 +4,7 @@
 $var= "testing"; 
 echo $var ?>
 <br>
-<img src="./img/hackerman.jpg" style="width: auto;" />
+<img src="./img/hackerman.jpg" style="width: 200%; height: auto;" />
 
 
 </html>
